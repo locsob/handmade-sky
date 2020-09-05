@@ -36,4 +36,9 @@ class UrlData
     {
         return $this->path;
     }
+
+    public function getMethod()
+    {
+        return $this->method;
+    }
 }

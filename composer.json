@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-
+    "ext-sqlite3": "*"
   },
   "autoload": {
     "psr-4": {

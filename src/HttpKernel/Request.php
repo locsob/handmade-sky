@@ -31,7 +31,7 @@ class Request
         return $self;
     }
 
-    public function get(string $param): ?string
+    public function getQueryParam(string $param): ?string
     {
         return $this->get[$param] ?? null;
     }
@@ -39,5 +39,15 @@ class Request
     public function getPath(): string
     {
         return $this->urlData->getPath();
+    }
+
+    public function getMethod(): string
+    {
+        return $this->urlData->getMethod();
+    }
+
+    public function getPostParam(string $param): ?string
+    {
+        return $this->post[$param] ?? null;
     }
 }

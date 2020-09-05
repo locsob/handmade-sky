@@ -25,21 +25,22 @@ class RouteResolver
     {
         $routes = require_once ROOT_PATH . 'config/routes.php';
 
-        $foundController = null;
-        foreach ($routes as $path => $controllerData) {
-            if ($path === $request->getPath()) {
-                $foundController = $controllerData;
+        $foundClass = null;
+        $foundMethod = null;
+        foreach ($routes as [$path, $requestMethod, $class, $method]) {
+            if ($path === $request->getPath() && $requestMethod === $request->getMethod()) {
+                $foundClass = $class;
+                $foundMethod = $method;
             }
         }
 
-        if (!$foundController) {
-            $foundController = [NotFoundController::class, 'index'];
+        if (!$foundClass) {
+            $foundClass = NotFoundController::class;
+            $foundMethod = 'index';
         }
 
-        [$class, $method] = $foundController;
+        $foundController = $this->injector->resolve($foundClass);
 
-        $foundController = $this->injector->resolve($class);
-
-        return [[$foundController, $method], [$request]];
+        return [[$foundController, $foundMethod], [$request]];
     }
 }
