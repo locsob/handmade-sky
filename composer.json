@@ -1,0 +1,20 @@
+{
+  "name": "vendor_name/skytest",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "locsob",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+
+  },
+  "autoload": {
+    "psr-4": {
+      "Skytest\\": "src"
+    }
+  }
+}

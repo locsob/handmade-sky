@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="10134ff0-0db3-4ccd-a67e-35a931faa05b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1h5IxF0AUFg5P5e3k24TUaKgo92" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="10134ff0-0db3-4ccd-a67e-35a931faa05b" name="Default Changelist" comment="" />
+      <created>1599294770141</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599294770141</updated>
+      <workItem from="1599294771262" duration="3395000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="768" y="245" width="374" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1599310872932">
+      <screen x="0" y="27" width="1920" height="1000" />
+    </state>
+    <state x="768" y="245" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599310872932" />
+    <state x="555" y="82" width="800" height="888" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599310343666">
+      <screen x="0" y="27" width="1920" height="1000" />
+    </state>
+    <state x="555" y="82" width="800" height="888" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599310343666" />
+    <state x="762" y="245" width="433" height="561" key="NewPhpClassDialog" timestamp="1599311298553">
+      <screen x="0" y="27" width="1920" height="1000" />
+    </state>
+    <state x="762" y="245" width="433" height="561" key="NewPhpClassDialog/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599311298553" />
+    <state x="755" y="451" width="399" height="149" key="NewPhpFileDialog" timestamp="1599295179117">
+      <screen x="0" y="27" width="1920" height="1000" />
+    </state>
+    <state x="755" y="451" width="399" height="149" key="NewPhpFileDialog/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599295179117" />
+    <state x="449" y="161" key="SettingsEditor" timestamp="1599295565003">
+      <screen x="0" y="27" width="1920" height="1000" />
+    </state>
+    <state x="449" y="161" key="SettingsEditor/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599295565003" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/HttpKernel/Request.php</url>
+          <line>18</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/public/index.php</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
