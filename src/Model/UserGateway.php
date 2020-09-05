@@ -21,11 +21,11 @@ class UserGateway
 
     public function find(int $id): User
     {
-        [$email, $passwordHash] = $this->client->find("
+        $row = $this->client->find("
             SELECT * FROM users where id = :id
         ", [':id' => $id]);
 
-        return new User($email, $passwordHash);
+        return User::populate((int) $row['id'], $row['email'], $row['password']);
     }
 
     public function update(User $user): void
@@ -37,8 +37,19 @@ class UserGateway
 
     public function insert(User $user): void
     {
-        $this->client->modify("
+        $id = $this->client->modify("
             INSERT INTO users (`email`, `password`) VALUES (:email, :password)
         ", [':email' => $user->getEmail(), ':password' => $user->getPassHash()]);
+
+        $user->setId($id);
+    }
+
+    public function findByEmail(string $email): ?User
+    {
+        $row = $this->client->find("
+            SELECT * FROM users where email = :email
+        ", [':email' => $email]);
+
+        return User::populate((int) $row['id'], $row['email'], $row['password']);
     }
 }

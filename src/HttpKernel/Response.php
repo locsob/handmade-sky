@@ -29,7 +29,7 @@ class Response
         ob_start();
 
         foreach ($this->headers as $name => $value) {
-            header($name, $value);
+            header("$name: $value");
         }
 
         echo $this->content;

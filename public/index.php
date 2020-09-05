@@ -7,6 +7,8 @@ use Skytest\HttpKernel\MiddlewareChain;
 use Skytest\HttpKernel\Request;
 use Skytest\HttpKernel\RouteResolver;
 
+session_start();
+
 $request = Request::createFromGlobals();
 
 define('ROOT_PATH', __DIR__ . '/../');

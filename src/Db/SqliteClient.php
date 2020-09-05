@@ -29,12 +29,14 @@ class SqliteClient
      * @param array $params
      * @return int|false
      */
-    public function modify(string $query, $params = [])
+    public function modify(string $query, $params = []): int
     {
         $stmt = $this->db->prepare($query);
         $stmt = $this->bindParams($params, $stmt);
 
         $stmt->execute();
+
+        return $this->db->lastInsertRowID();
     }
 
     /**
@@ -49,7 +51,7 @@ class SqliteClient
 
         $res = $stmt->execute();
 
-        return $res->fetchArray()[0] ?? null;
+        return $res->fetchArray(SQLITE3_ASSOC) ?? null;
     }
 
     public function findAll(string $query, $params = []): array
@@ -70,7 +72,8 @@ class SqliteClient
     private function bindParams(array $params, SQLite3Stmt $stmt): SQLite3Stmt
     {
         foreach ($params as $name => $value) {
-            $stmt->bindParam($name, $value);
+//            $stmt->bindParam($name, $value);
+            $stmt->bindValue($name, $value);
         }
         return $stmt;
     }

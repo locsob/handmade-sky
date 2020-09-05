@@ -8,18 +8,25 @@ use Skytest\HttpKernel\Request;
 use Skytest\HttpKernel\Response;
 use Skytest\Model\User;
 use Skytest\Model\UserGateway;
+use Skytest\Security\TokenStorage;
 
 class SignupController extends AbstractController
 {
     private UserGateway $userGateway;
+    /**
+     * @var TokenStorage
+     */
+    private TokenStorage $tokenStorage;
 
     /**
      * SignupController constructor.
      * @param UserGateway $userGateway
+     * @param TokenStorage $tokenStorage
      */
-    public function __construct(UserGateway $userGateway)
+    public function __construct(UserGateway $userGateway, TokenStorage $tokenStorage)
     {
         $this->userGateway = $userGateway;
+        $this->tokenStorage = $tokenStorage;
     }
 
     public function index(): Response
@@ -32,9 +39,11 @@ class SignupController extends AbstractController
         $email = $request->getPostParam('email');
         $password = $request->getPostParam('password');
 
-        $user = new User($email, $password);
+        $user = User::create($email, $password);
         $this->userGateway->insert($user);
 
-        return $this->redirect('/login');
+        $this->tokenStorage->loginUser($user);
+
+        return $this->redirect('/home');
     }
 }
