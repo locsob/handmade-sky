@@ -6,7 +6,7 @@ namespace Skytest\HttpKernel;
 
 class Request
 {
-    private UrlData $uri;
+    private UrlData $urlData;
 
     private array $post;
 
@@ -21,7 +21,7 @@ class Request
         $self->get = $_GET;
         $self->post = $_POST;
         $self->server = $_SERVER;
-        $self->uri = new UrlData(
+        $self->urlData = new UrlData(
             $_SERVER['SERVER_NAME'],
             (int) $_SERVER['SERVER_PORT'],
             $_SERVER['PATH_INFO'],
@@ -29,5 +29,15 @@ class Request
         );
 
         return $self;
+    }
+
+    public function get(string $param): ?string
+    {
+        return $this->get[$param] ?? null;
+    }
+
+    public function getPath(): string
+    {
+        return $this->urlData->getPath();
     }
 }

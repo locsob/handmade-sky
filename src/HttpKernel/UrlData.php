@@ -28,4 +28,12 @@ class UrlData
         $this->path = $path;
         $this->method = $method;
     }
+
+    /**
+     * @return string
+     */
+    public function getPath(): string
+    {
+        return $this->path;
+    }
 }
