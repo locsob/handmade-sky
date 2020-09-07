@@ -8,7 +8,7 @@ use Skytest\HttpKernel\Middleware\AbstractMiddleware;
 use Skytest\HttpKernel\Request;
 use Skytest\HttpKernel\Response;
 
-class UserActivationMiddleware extends AbstractMiddleware
+class CsrfMiddleware extends AbstractMiddleware
 {
     private TokenStorage $tokenStorage;
 
@@ -23,11 +23,14 @@ class UserActivationMiddleware extends AbstractMiddleware
 
     public function handle(Request $request, ?Response $response): array
     {
-        $user = $this->tokenStorage->findCurrentUser();
+        $csrf = $this->tokenStorage->getCsrfToken();
+        $requestCsrf = $request->getPostParam('csrf');
 
-        if ($user && !$user->isActivated() && !in_array($request->getPath(), ['/show-activate', '/send-activate', '/logout'])) {
-            $response = new Response\RedirectResponse('/show-activate');
-        }
+        $isCorrectCsrf = $csrf === $requestCsrf;
+
+        if ($request->isPost() && !$isCorrectCsrf) {
+            $response = new Response\RedirectResponse('/home');
+        };
 
         return $this->handleNext($request, $response);
     }

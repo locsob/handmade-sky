@@ -55,10 +55,25 @@ class TokenStorage
     public function loginUser(User $user): void
     {
         $_SESSION['id'] = $user->getId();
+        $_SESSION['csrf'] = $this->generateCsrfToken($user);
     }
 
     public function logout()
     {
         session_destroy();
+    }
+
+    public function getCsrfToken(): ?string
+    {
+        return $_SESSION['csrf'];
+    }
+
+    /**
+     * @param User $user
+     * @return string
+     */
+    private function generateCsrfToken(User $user): string
+    {
+        return rand(555, 999999) . base64_encode(json_encode($user->getName()));
     }
 }

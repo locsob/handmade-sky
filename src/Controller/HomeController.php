@@ -12,10 +12,6 @@ use Skytest\Security\TokenStorage;
 class HomeController extends AbstractController
 {
     private SqliteClient $client;
-    /**
-     * @var TokenStorage
-     */
-    private TokenStorage $tokenStorage;
 
     /**
      * HomeController constructor.
@@ -24,8 +20,8 @@ class HomeController extends AbstractController
      */
     public function __construct(SqliteClient $client, TokenStorage $tokenStorage)
     {
+        parent::__construct($tokenStorage);
         $this->client = $client;
-        $this->tokenStorage = $tokenStorage;
     }
 
     public function index(Request $request): Response

@@ -1,4 +1,6 @@
-<h1>Login</h1>
+<h1>Change Credentials</h1>
+<?php require ROOT_PATH . 'views/parts/_validation.php' ?>
+<p><a href="/home">Home</a></p>
 <form method="post">
     <label>
         New name:
@@ -7,8 +9,9 @@
     <br>
     <label>
         New password:
-        <input type="text" name="password">
+        <input type="password" name="password">
     </label>
     <br>
+    <?php require ROOT_PATH . 'views/parts/_csrf.php' ?>
     <input type="submit" value="submit">
 </form>

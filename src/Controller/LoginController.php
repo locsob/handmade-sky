@@ -8,34 +8,74 @@ use Skytest\HttpKernel\Request;
 use Skytest\HttpKernel\Response;
 use Skytest\Model\UserGateway;
 use Skytest\Security\TokenStorage;
+use Skytest\Service\ValidateService;
 
 class LoginController extends AbstractController
 {
     private UserGateway $userGateway;
 
-    private TokenStorage $tokenStorage;
+    /**
+     * @var ValidateService
+     */
+    private ValidateService $validateService;
 
     /**
      * LoginController constructor.
      * @param UserGateway $userGateway
      * @param TokenStorage $tokenStorage
+     * @param ValidateService $validateService
      */
-    public function __construct(UserGateway $userGateway, TokenStorage $tokenStorage)
-    {
+    public function __construct(
+        UserGateway $userGateway,
+        TokenStorage $tokenStorage,
+        ValidateService $validateService
+    ) {
+        parent::__construct($tokenStorage);
         $this->userGateway = $userGateway;
         $this->tokenStorage = $tokenStorage;
+        $this->validateService = $validateService;
     }
 
-    public function index(): Response
+    public function index(Request $request): Response
     {
-        return $this->template('login.php');
+        return $this->template('login.php', ['error' => $request->getQueryParam('error')]);
     }
 
     public function login(Request $request): Response
     {
-        $user = $this->userGateway->findByName($request->getPostParam('name'));
+        $name = $request->getPostParam('name');
+        $password = $request->getPostParam('password');
 
-        if ($user && $user->isCorrectPassword($request->getPostParam('password'))) {
+        $error = $this->validateService->validate([
+            [fn() => empty($name), 'Name must be not empty'],
+            [fn() => empty($password), 'Password must be not empty'],
+        ]);
+
+        if ($error) {
+            return $this->redirect('/login', compact('error'));
+        }
+
+        $user = $this->userGateway->findByName($name);
+
+        $error = $this->validateService->validate([
+            [fn() => !$user, 'User not exists'],
+        ]);
+
+        if ($error) {
+            return $this->redirect('/login', compact('error'));
+        }
+
+        $isCorrectPassword = $user->isCorrectPassword($password);
+
+        $error = $this->validateService->validate([
+            [fn() => !$isCorrectPassword, 'Password incorrect'],
+        ]);
+
+        if ($error) {
+            return $this->redirect('/login', compact('error'));
+        }
+
+        if ($user && $isCorrectPassword) {
             $this->tokenStorage->loginUser($user);
         }
 

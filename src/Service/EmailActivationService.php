@@ -26,10 +26,10 @@ class EmailActivationService
         $activationCode = $user->getActivationCode();
 
         $to      = $email;
-        $subject = 'skytest';
+        $subject = 'skytest activation';
         $message = sprintf('Go to link for: <a href="http://%s/activate?code=%s">Activate</a>', $domain, $activationCode);
-        $headers = 'From: webmaster@example.com' . "\r\n" .
-            'Reply-To: webmaster@example.com' . "\r\n" .
+        $headers = 'From: skytest@example.com' . "\r\n" .
+            'Reply-To: skytest@example.com' . "\r\n" .
             'X-Mailer: PHP/' . phpversion();
 
         mail($to, $subject, $message, $headers);

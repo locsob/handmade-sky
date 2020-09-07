@@ -13,10 +13,11 @@ class SqliteClient
 
     /**
      * SqliteClient constructor.
+     * @param string $dbPath
      */
-    public function __construct()
+    public function __construct(string $dbPath)
     {
-        $this->db = new SQLite3(ROOT_PATH . 'db/mydb.db');
+        $this->db = new SQLite3($dbPath);
     }
 
     public function __destruct()

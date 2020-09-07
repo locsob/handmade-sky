@@ -8,8 +8,10 @@ use Skytest\HttpKernel\Response;
 
 class RedirectResponse extends Response
 {
-    public function __construct(string $route)
+    public function __construct(string $route, array $params = [])
     {
-        parent::__construct('', 301, ['Location' => $route]);
+        $url = sprintf('%s?%s', $route, http_build_query($params));
+
+        parent::__construct('', 301, ['Location' => $url]);
     }
 }

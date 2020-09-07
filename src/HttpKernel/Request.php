@@ -55,4 +55,9 @@ class Request
     {
         return $this->urlData->getDomain();
     }
+
+    public function isPost(): bool
+    {
+        return $this->getMethod() === 'POST';
+    }
 }

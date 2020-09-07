@@ -10,15 +10,13 @@ use Skytest\Security\TokenStorage;
 
 class LogoutController extends AbstractController
 {
-    private TokenStorage $tokenStorage;
-
     /**
      * LogoutController constructor.
      * @param TokenStorage $tokenStorage
      */
     public function __construct(TokenStorage $tokenStorage)
     {
-        $this->tokenStorage = $tokenStorage;
+        parent::__construct($tokenStorage);
     }
 
     public function logout(): Response

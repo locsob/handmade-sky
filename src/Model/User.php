@@ -56,6 +56,7 @@ class User
     {
         if ($this->activation_code === $code) {
             $this->activated = true;
+            $this->activation_code = null;
         }
     }
 
@@ -82,7 +83,7 @@ class User
      */
     private static function hashUserPass(string $password, string $name): string
     {
-        $hash = password_hash($password, PASSWORD_BCRYPT, ['salt' => base64_encode($name . $name . 19210392131)]);
+        $hash = password_hash($password, PASSWORD_BCRYPT, ['salt' => base64_encode($name . $name . 192103921313213123)]);
 
         if (is_string($hash)) {
             return $hash;

@@ -10,6 +10,7 @@ use Skytest\HttpKernel\Response\RedirectResponse;
 use Skytest\Model\UserGateway;
 use Skytest\Security\TokenStorage;
 use Skytest\Service\EmailActivationService;
+use Skytest\Service\ValidateService;
 
 class ActivateController extends AbstractController
 {
@@ -17,32 +18,47 @@ class ActivateController extends AbstractController
 
     private EmailActivationService $activationService;
 
-    private TokenStorage $tokenStorage;
+    /**
+     * @var ValidateService
+     */
+    private ValidateService $validateService;
 
     /**
      * ActivateController constructor.
      * @param UserGateway $userGateway
      * @param EmailActivationService $activationService
      * @param TokenStorage $tokenStorage
+     * @param ValidateService $validateService
      */
     public function __construct(
         UserGateway $userGateway,
         EmailActivationService $activationService,
-        TokenStorage $tokenStorage
+        TokenStorage $tokenStorage,
+        ValidateService $validateService
     ) {
+        parent::__construct($tokenStorage);
+
         $this->userGateway = $userGateway;
         $this->activationService = $activationService;
-        $this->tokenStorage = $tokenStorage;
+        $this->validateService = $validateService;
     }
 
     public function index(Request $request)
     {
-        return $this->template('show-activate.php');
+        return $this->template('show-activate.php', ['error' => $request->getQueryParam('error')]);
     }
 
     public function send(Request $request)
     {
         $email = $request->getPostParam('email');
+
+        $error = $this->validateService->validate([
+            [fn() => !filter_var($email, FILTER_VALIDATE_EMAIL), 'Email not valid'],
+        ]);
+
+        if ($error) {
+            return $this->redirect('/show-activate', compact('error'));
+        }
 
         if ($email) {
             $this->activationService->send($email, $request->getDomain());
