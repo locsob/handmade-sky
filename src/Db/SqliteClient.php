@@ -55,16 +55,6 @@ class SqliteClient
         return $res->fetchArray(SQLITE3_ASSOC) ?: null;
     }
 
-    public function findAll(string $query, $params = []): array
-    {
-        $stmt = $this->db->prepare($query);
-        $stmt = $this->bindParams($params, $stmt);
-
-        $res = $stmt->execute();
-
-        return $res->fetchArray();
-    }
-
     /**
      * @param array $params
      * @param SQLite3Stmt $stmt

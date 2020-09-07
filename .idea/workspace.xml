@@ -5,35 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10134ff0-0db3-4ccd-a67e-35a931faa05b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Security/CsrfMiddleware.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/ValidateService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/parts/_csrf.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/parts/_validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/pre-filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/pre-filter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/mydb.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/mydb.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AbstractController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AbstractController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ActivateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ActivateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CredentialsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CredentialsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LogoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LogoutController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/NotFoundController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/NotFoundController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SignupController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SignupController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/WelcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/WelcomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Db/SqliteClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Db/SqliteClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HttpKernel/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/HttpKernel/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HttpKernel/Response/RedirectResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/HttpKernel/Response/RedirectResponse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/TokenStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/TokenStorage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/UserActivationMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/UserActivationMiddleware.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/EmailActivationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/EmailActivationService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/change-credentials.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/change-credentials.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/show-activate.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/show-activate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/signup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,33 +36,6 @@
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/glob" />
-      <path value="$PROJECT_DIR$/vendor/felixfbecker/advanced-json-rpc" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/path-util" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
-      <path value="$PROJECT_DIR$/vendor/vimeo/psalm" />
-      <path value="$PROJECT_DIR$/vendor/felixfbecker/language-server-protocol" />
-      <path value="$PROJECT_DIR$/vendor/netresearch/jsonmapper" />
-      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
-      <path value="$PROJECT_DIR$/vendor/openlss/lib-array2xml" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/vendor/amphp/amp" />
-      <path value="$PROJECT_DIR$/vendor/amphp/byte-stream" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
     </include_path>
   </component>
   <component name="ProjectId" id="1h5IxF0AUFg5P5e3k24TUaKgo92" />
@@ -104,7 +49,7 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -133,7 +78,7 @@
       <updated>1599294770141</updated>
       <workItem from="1599294771262" duration="17685000" />
       <workItem from="1599385975082" duration="1449000" />
-      <workItem from="1599462684330" duration="6578000" />
+      <workItem from="1599462684330" duration="7264000" />
     </task>
     <task id="LOCAL-00001" summary="router, di, template">
       <created>1599316979218</created>
@@ -170,7 +115,28 @@
       <option name="project" value="LOCAL" />
       <updated>1599464275637</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="csrf protection">
+      <created>1599469461534</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1599469461534</updated>
+    </task>
+    <task id="LOCAL-00007" summary="csrf protection">
+      <created>1599469483915</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1599469483915</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix composer deps">
+      <created>1599469874236</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1599469874236</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +147,9 @@
     <MESSAGE value="user created" />
     <MESSAGE value="signup, login, logout" />
     <MESSAGE value="activate, change credentials" />
-    <option name="LAST_COMMIT_MESSAGE" value="activate, change credentials" />
+    <MESSAGE value="csrf protection" />
+    <MESSAGE value="fix composer deps" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix composer deps" />
   </component>
   <component name="WindowStateProjectService">
     <state x="555" y="187" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599338329464">
@@ -224,82 +192,82 @@
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
     <state x="1099" y="192" key="#xdebugger.evaluate/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469198836" />
-    <state x="525" y="94" width="860" height="864" key="CommitChangelistDialog2" timestamp="1599464275550">
+    <state x="525" y="94" width="860" height="864" key="CommitChangelistDialog2" timestamp="1599469874176">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state x="525" y="94" width="860" height="864" key="CommitChangelistDialog2/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599464275550" />
+    <state x="525" y="94" width="860" height="864" key="CommitChangelistDialog2/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469874176" />
     <state x="738" y="283" width="424" height="484" key="FileChooserDialogImpl" timestamp="1599338322966">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
     <state x="738" y="283" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599338322966" />
-    <state width="1874" height="299" key="GridCell.Tab.0.bottom" timestamp="1599469204518">
+    <state width="1874" height="299" key="GridCell.Tab.0.bottom" timestamp="1599469442182">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state width="1874" height="299" key="GridCell.Tab.0.bottom/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469204518" />
-    <state width="1874" height="299" key="GridCell.Tab.0.center" timestamp="1599469204518">
+    <state width="1874" height="299" key="GridCell.Tab.0.bottom/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469442182" />
+    <state width="1874" height="299" key="GridCell.Tab.0.center" timestamp="1599469442182">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state width="1874" height="299" key="GridCell.Tab.0.center/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469204518" />
-    <state width="1874" height="299" key="GridCell.Tab.0.left" timestamp="1599469204518">
+    <state width="1874" height="299" key="GridCell.Tab.0.center/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469442182" />
+    <state width="1874" height="299" key="GridCell.Tab.0.left" timestamp="1599469442182">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state width="1874" height="299" key="GridCell.Tab.0.left/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469204518" />
-    <state width="1874" height="299" key="GridCell.Tab.0.right" timestamp="1599469204518">
+    <state width="1874" height="299" key="GridCell.Tab.0.left/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469442182" />
+    <state width="1874" height="299" key="GridCell.Tab.0.right" timestamp="1599469442182">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state width="1874" height="299" key="GridCell.Tab.0.right/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469204518" />
-    <state width="1874" height="299" key="GridCell.Tab.1.bottom" timestamp="1599469204518">
+    <state width="1874" height="299" key="GridCell.Tab.0.right/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469442182" />
+    <state width="1874" height="299" key="GridCell.Tab.1.bottom" timestamp="1599469442182">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state width="1874" height="299" key="GridCell.Tab.1.bottom/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469204518" />
-    <state width="1874" height="299" key="GridCell.Tab.1.center" timestamp="1599469204518">
+    <state width="1874" height="299" key="GridCell.Tab.1.bottom/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469442182" />
+    <state width="1874" height="299" key="GridCell.Tab.1.center" timestamp="1599469442182">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state width="1874" height="299" key="GridCell.Tab.1.center/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469204518" />
-    <state width="1874" height="299" key="GridCell.Tab.1.left" timestamp="1599469204518">
+    <state width="1874" height="299" key="GridCell.Tab.1.center/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469442182" />
+    <state width="1874" height="299" key="GridCell.Tab.1.left" timestamp="1599469442182">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state width="1874" height="299" key="GridCell.Tab.1.left/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469204518" />
-    <state width="1874" height="299" key="GridCell.Tab.1.right" timestamp="1599469204518">
+    <state width="1874" height="299" key="GridCell.Tab.1.left/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469442182" />
+    <state width="1874" height="299" key="GridCell.Tab.1.right" timestamp="1599469442182">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state width="1874" height="299" key="GridCell.Tab.1.right/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469204518" />
-    <state width="1874" height="299" key="GridCell.Tab.2.bottom" timestamp="1599469204518">
+    <state width="1874" height="299" key="GridCell.Tab.1.right/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469442182" />
+    <state width="1874" height="299" key="GridCell.Tab.2.bottom" timestamp="1599469442182">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state width="1874" height="299" key="GridCell.Tab.2.bottom/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469204518" />
-    <state width="1874" height="299" key="GridCell.Tab.2.center" timestamp="1599469204518">
+    <state width="1874" height="299" key="GridCell.Tab.2.bottom/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469442182" />
+    <state width="1874" height="299" key="GridCell.Tab.2.center" timestamp="1599469442182">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state width="1874" height="299" key="GridCell.Tab.2.center/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469204518" />
-    <state width="1874" height="299" key="GridCell.Tab.2.left" timestamp="1599469204518">
+    <state width="1874" height="299" key="GridCell.Tab.2.center/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469442182" />
+    <state width="1874" height="299" key="GridCell.Tab.2.left" timestamp="1599469442182">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state width="1874" height="299" key="GridCell.Tab.2.left/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469204518" />
-    <state width="1874" height="299" key="GridCell.Tab.2.right" timestamp="1599469204518">
+    <state width="1874" height="299" key="GridCell.Tab.2.left/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469442182" />
+    <state width="1874" height="299" key="GridCell.Tab.2.right" timestamp="1599469442182">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state width="1874" height="299" key="GridCell.Tab.2.right/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469204518" />
+    <state width="1874" height="299" key="GridCell.Tab.2.right/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469442182" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1599338334085">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
     <state width="263" height="500" key="HiddenNamespacesPopup/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599338334085" />
-    <state x="762" y="245" width="457" height="561" key="NewPhpClassDialog" timestamp="1599468955083">
+    <state x="762" y="245" width="457" height="561" key="NewPhpClassDialog" timestamp="1599469749290">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state x="762" y="245" width="457" height="561" key="NewPhpClassDialog/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599468955083" />
-    <state x="755" y="451" width="399" height="149" key="NewPhpFileDialog" timestamp="1599468005205">
+    <state x="762" y="245" width="457" height="561" key="NewPhpClassDialog/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469749290" />
+    <state x="755" y="451" width="399" height="149" key="NewPhpFileDialog" timestamp="1599469373810">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state x="755" y="451" width="399" height="149" key="NewPhpFileDialog/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599468005205" />
+    <state x="755" y="451" width="399" height="149" key="NewPhpFileDialog/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469373810" />
     <state x="449" y="161" key="SettingsEditor" timestamp="1599313702877">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
     <state x="449" y="161" key="SettingsEditor/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599313702877" />
-    <state x="555" y="262" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1599316981329">
+    <state x="555" y="262" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1599469895065">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state x="555" y="262" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599316981329" />
+    <state x="555" y="262" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469895065" />
     <state width="960" height="501" key="XDebugger.FullValuePopup" timestamp="1599463279975">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
@@ -308,14 +276,18 @@
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
     <state x="857" y="415" width="367" height="248" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599338484372" />
+    <state x="651" y="265" width="618" height="522" key="find.popup" timestamp="1599469436530">
+      <screen x="0" y="27" width="1920" height="1000" />
+    </state>
+    <state x="651" y="265" width="618" height="522" key="find.popup/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469436530" />
     <state x="624" y="240" key="run.anything.popup" timestamp="1599386582068">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
     <state x="624" y="240" key="run.anything.popup/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599386582068" />
-    <state x="623" y="244" width="672" height="678" key="search.everywhere.popup" timestamp="1599468738198">
+    <state x="623" y="244" width="672" height="678" key="search.everywhere.popup" timestamp="1599469520000">
       <screen x="0" y="27" width="1920" height="1000" />
     </state>
-    <state x="623" y="244" width="672" height="678" key="search.everywhere.popup/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599468738198" />
+    <state x="623" y="244" width="672" height="678" key="search.everywhere.popup/0.27.1920.1000/1920.0.1920.1080@0.27.1920.1000" timestamp="1599469520000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
