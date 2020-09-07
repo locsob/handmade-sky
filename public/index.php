@@ -25,10 +25,6 @@ if (!$response) {
     [$controller, $args] = $routeResolver->getController($request);
 
     $response = $controller(...$args);
-
-//    $postFilters = new MiddlewareChain(ROOT_PATH . 'config/post-middleware.php');
-//
-//    [$request, $response] = $postFilters->handleResponse($request, $response);
 }
 
 $response->flush();
