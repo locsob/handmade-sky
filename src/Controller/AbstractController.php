@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Skytest\Controller;
 
 use Skytest\HttpKernel\Response;
+use Skytest\HttpKernel\Response\RedirectResponse;
 
 abstract class AbstractController
 {
@@ -30,8 +31,6 @@ abstract class AbstractController
 
     protected function redirect(string $route)
     {
-        return new Response('', 301, [
-            'Location' => $route
-        ]);
+        return new RedirectResponse($route);
     }
 }

@@ -18,6 +18,7 @@ class SignupController extends AbstractController
      */
     private TokenStorage $tokenStorage;
 
+
     /**
      * SignupController constructor.
      * @param UserGateway $userGateway
@@ -36,10 +37,10 @@ class SignupController extends AbstractController
 
     public function signup(Request $request): Response
     {
-        $email = $request->getPostParam('email');
+        $name = $request->getPostParam('name');
         $password = $request->getPostParam('password');
 
-        $user = User::create($email, $password);
+        $user = User::create($name, $password);
         $this->userGateway->insert($user);
 
         $this->tokenStorage->loginUser($user);

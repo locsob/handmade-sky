@@ -51,7 +51,7 @@ class SqliteClient
 
         $res = $stmt->execute();
 
-        return $res->fetchArray(SQLITE3_ASSOC) ?? null;
+        return $res->fetchArray(SQLITE3_ASSOC) ?: null;
     }
 
     public function findAll(string $query, $params = []): array
@@ -72,7 +72,6 @@ class SqliteClient
     private function bindParams(array $params, SQLite3Stmt $stmt): SQLite3Stmt
     {
         foreach ($params as $name => $value) {
-//            $stmt->bindParam($name, $value);
             $stmt->bindValue($name, $value);
         }
         return $stmt;

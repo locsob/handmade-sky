@@ -3,7 +3,7 @@
 require '../vendor/autoload.php';
 
 use Skytest\HttpKernel\DI\Injector;
-use Skytest\HttpKernel\MiddlewareChain;
+use Skytest\HttpKernel\Middleware\MiddlewareChain;
 use Skytest\HttpKernel\Request;
 use Skytest\HttpKernel\RouteResolver;
 
@@ -13,14 +13,22 @@ $request = Request::createFromGlobals();
 
 define('ROOT_PATH', __DIR__ . '/../');
 
-$routeResolver = new RouteResolver(new Injector());
+$injector = new Injector();
 
-[$controller, $args] = $routeResolver->getController($request);
+$preFilters = new MiddlewareChain($injector->resolveArray(require_once ROOT_PATH . 'config/pre-filter.php'));
 
-$response = $controller(...$args);
+[$request, $response] = $preFilters->handleRequest($request);
 
-$middlewareChain = new MiddlewareChain();
+if (!$response) {
+    $routeResolver = new RouteResolver($injector);
 
-$response = $middlewareChain->handle($request, $response);
+    [$controller, $args] = $routeResolver->getController($request);
+
+    $response = $controller(...$args);
+
+//    $postFilters = new MiddlewareChain(ROOT_PATH . 'config/post-middleware.php');
+//
+//    [$request, $response] = $postFilters->handleResponse($request, $response);
+}
 
 $response->flush();

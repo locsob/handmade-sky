@@ -33,7 +33,7 @@ class LoginController extends AbstractController
 
     public function login(Request $request): Response
     {
-        $user = $this->userGateway->findByEmail($request->getPostParam('email'));
+        $user = $this->userGateway->findByName($request->getPostParam('name'));
 
         if ($user && $user->isCorrectPassword($request->getPostParam('password'))) {
             $this->tokenStorage->loginUser($user);

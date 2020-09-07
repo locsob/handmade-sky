@@ -50,4 +50,9 @@ class Request
     {
         return $this->post[$param] ?? null;
     }
+
+    public function getDomain(): string
+    {
+        return $this->urlData->getDomain();
+    }
 }

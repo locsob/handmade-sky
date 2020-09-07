@@ -16,5 +16,8 @@
     "psr-4": {
       "Skytest\\": "src"
     }
+  },
+  "require-dev": {
+    "vimeo/psalm": "^3.15"
   }
 }

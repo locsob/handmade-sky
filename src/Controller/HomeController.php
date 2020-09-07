@@ -32,6 +32,6 @@ class HomeController extends AbstractController
     {
         $user = $this->tokenStorage->getCurrentUser();
 
-        return $this->template('home.php', ['email' => $user->getEmail()]);
+        return $this->template('home.php', ['name' => $user->getName()]);
     }
 }

@@ -9,6 +9,7 @@ class Response
     private array $headers;
 
     private string $content;
+
     private int $status;
 
     /**

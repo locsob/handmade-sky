@@ -6,11 +6,17 @@ namespace Skytest\HttpKernel\DI;
 
 class Container
 {
+    /**
+     * @var ServiceConfig[]
+     */
     private array $services = [];
 
-    public function autowire(string $class): void
+    public function autowire(string $class): ServiceConfig
     {
-        $this->services[$class] = $class;
+        $serviceConfig = ServiceConfig::autowire($class);
+        $this->services[$class] = $serviceConfig;
+
+        return $serviceConfig;
     }
 
     public function get(string $depClass)

@@ -18,14 +18,14 @@ class UrlData
      * UrlData constructor.
      * @param string $serverName
      * @param int $port
-     * @param string $path
+     * @param string|null $path
      * @param string $method
      */
-    public function __construct(string $serverName, int $port, string $path, string $method)
+    public function __construct(string $serverName, int $port, ?string $path, string $method)
     {
         $this->serverName = $serverName;
         $this->port = $port;
-        $this->path = $path;
+        $this->path = $path ?? '/';
         $this->method = $method;
     }
 
@@ -40,5 +40,10 @@ class UrlData
     public function getMethod()
     {
         return $this->method;
+    }
+
+    public function getDomain(): string
+    {
+        return sprintf('%s:%s', $this->serverName, $this->port);
     }
 }

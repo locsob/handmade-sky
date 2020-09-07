@@ -1,8 +1,8 @@
 <h1>Signup</h1>
 <form action="" method="post">
     <label>
-        Email:
-        <input type="text" name="email"/>
+        Name:
+        <input type="text" name="name"/>
     </label>
     <br>
     <label>

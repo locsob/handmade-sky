@@ -11,8 +11,6 @@ class TokenStorage
 {
     private UserGateway $userGateway;
 
-    private array $cache = [];
-
     /**
      * TokenStorage constructor.
      * @param UserGateway $userGateway
@@ -22,7 +20,7 @@ class TokenStorage
         $this->userGateway = $userGateway;
     }
 
-    public function getCurrentUser(): ?User
+    public function findCurrentUser(): ?User
     {
         $id = $_SESSION['id'];
 
@@ -33,15 +31,25 @@ class TokenStorage
         return $this->userGateway->find($id);
     }
 
+    public function getCurrentUser(): User
+    {
+        if ($user = $this->findCurrentUser()) {
+            return $user;
+        }
+
+        throw new \DomainException('User must be logged in');
+    }
+
+
     public function isGuest(): bool
     {
-        $id = $_SERVER['id'];
+        $id = $_SESSION['id'];
 
         if (!$id) {
             return true;
         }
 
-        return (bool) $this->userGateway->find($id);
+        return (bool) !$this->userGateway->find($id);
     }
 
     public function loginUser(User $user): void
